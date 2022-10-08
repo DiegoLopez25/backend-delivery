@@ -413,7 +413,7 @@ class IncomingRequest extends Request
             }
         } elseif (! is_cli()) {
             // @codeCoverageIgnoreStart
-            exit('You have an empty or invalid base URL. The baseURL value must be set in Config\App.php, or through the .env file.');
+            exit('You have an empty or invalid base URL. The baseURL value must be set in Config\App.php, or through the ..env file.');
             // @codeCoverageIgnoreEnd
         }
 

@@ -35,7 +35,12 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->post('/auth/login', 'AuthController::login');
+$routes->get('/auth/user', 'AuthController::getUserData', ['authFilter']);
+
 $routes->group('api',['namespace'=>'App\Controllers\API','filter' => 'authFilter'],function($routes){
+
+
+
     /*Routes Usuarios  */
     $routes->get('usuarios','Usuario::index');
     $routes->post('usuarios/create','Usuario::create');

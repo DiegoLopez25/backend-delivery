@@ -2,11 +2,13 @@
 
 namespace App\Controllers;
 
+use App\Models\RolModel;
 use App\Models\UsuarioModel;
 use CodeIgniter\API\ResponseTrait;
 use Config\Services;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
+
 class AuthController extends BaseController
 {
     use ResponseTrait;
@@ -19,55 +21,92 @@ class AuthController extends BaseController
 
     public function login()
     {
+
         try {
-            //para obtener en datos en formato JSON
-            /*$username = $this->request->getJSON()->username;
-            $password = $this->request->getJSON()->password;*/
-            //Para obtener datos en formato data-form (formulario)
-            $username = $this->request->getPost("username");
-            $password = $this->request->getPost("password");
 
-            $usuarioModel = new UsuarioModel();
-            
-            $validarUsuario = $usuarioModel->where('usuario',$username)->first();
+            $rules = [
+                'username' => ['rules' => 'required'],
+                'password' => ['rules' => 'required']
+            ];
 
-            if($validarUsuario == null){
-                return $this->respond(["Error"=>"Error usuario","msg"=>"Usuario no encontrado"],200);
+            if (!$this->validate($rules)) {
+                return $this->fail($this->validator->getErrors(), 422);
             }
-            if(verificarPassword($password, $validarUsuario['password'])){
-                $key = Services::getSecretKey();
-                $jwt = $this->generarJWT($validarUsuario);
-                $jwt2 = JWT::decode($jwt,new Key($key,"HS256"));
-                return $this->respond(['nombre'=>$jwt2->data->nombre,
-                                       'apellido'=>$jwt2->data->apellido,
-                                       'rol'=>$jwt2->data->id_rol,
-                                       'usuario'=>$jwt2->data->usuario,
-                                       'Token' => $jwt]
-                                       ,201);
-            }else{
-                return $this->failValidationError('Contraseña Invalida');   
-            }            
+
+            $username = $this->request->getVar("username");
+            $password = $this->request->getVar("password");
+
+            $userModel = new UsuarioModel();
+            $rolModel = new RolModel();
+
+            $user = $userModel->where('usuario', $username)->first();
+
+            if ($user == null) {
+                return $this->fail(['username' => 'Estas credenciales no coinciden en nuestros registros'], 422);
+            }
+
+            if (verificarPassword($password, $user['password'])) {
+
+                //cargando el rol
+                $rol = $rolModel->where('id',$user['id_rol'])->first();
+
+                $userPayload = [
+                    'nombre' => $user["nombre"],
+                    'apellido' => $user["apellido"],
+                    'role' => $rol["nombre"],
+                    'role_id' => $user['id_rol']
+                ];
+
+                $jwt = $this->generarJWT($userPayload);
+
+                $responseData = [
+                    'token' => $jwt,
+                    'user' => $userPayload
+                ];
+
+                return $this->respond($responseData, 201);
+            } else {
+                return $this->fail(['username' => 'Usuario o contraseña incorrecta'], 422);
+            }
         } catch (\Exception $e) {
             return $this->failServerError("Ha ocurrido un error en el servidor");
         }
     }
 
-    protected function generarJWT($usuario){
+    public function getUserData()
+    {
+        $key = Services::getSecretKey();
+        $authHeader = $this->request->getHeader("Authorization");
+        $authHeader = $authHeader->getValue();
+        $token = explode(" ",$authHeader);
+
+        try {
+            $decoded = JWT::decode($token[1], new Key($key,"HS256"));
+
+            if ($decoded) {
+                $response = [
+                    'user' => $decoded->data
+                ];
+                return $this->respond($response,200);
+            }
+        } catch (\Exception $ex) {
+            return $this->fail('Unauthorized', 401);
+        }
+
+    }
+
+    protected function generarJWT($userPayload)
+    {
         $key = Services::getSecretKey();
         date_default_timezone_set("America/El_Salvador");
         $time = time();
-        $payload =[
-            'aud'   => base_url(),
-            'iat'   => $time,//tiempo del token
-            'exp'   => $time+600,//tiempo cuando expira el token en segundos
-            'data'  => [
-                'nombre' => $usuario['nombre'],
-                'apellido'=> $usuario['apellido'],
-                'id_rol'=> $usuario['id_rol'],
-                'usuario'=> $usuario['usuario'],
-            ]
+        $payload = [
+            'aud' => base_url(),
+            'iat' => $time,//tiempo del token
+            'exp' => $time + 600,//tiempo cuando expira el token en segundos
+            'data' => $userPayload
         ];
-        $jwt = JWT::encode($payload,$key,'HS256');
+        $jwt = JWT::encode($payload, $key, 'HS256');
         return $jwt;
     }
 
