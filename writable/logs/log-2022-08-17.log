@@ -1,0 +1,28 @@
+CRITICAL - 2022-08-17 10:48:50 --> Cannot use object of type CodeIgniter\HTTP\IncomingRequest as array
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->create()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}
+CRITICAL - 2022-08-17 10:51:15 --> Cannot use object of type CodeIgniter\HTTP\IncomingRequest as array
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->create()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}
+CRITICAL - 2022-08-17 10:56:07 --> Cannot use object of type CodeIgniter\HTTP\IncomingRequest as array
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->create()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}
+CRITICAL - 2022-08-17 11:11:52 --> Cannot use object of type CodeIgniter\HTTP\IncomingRequest as array
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->create()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}

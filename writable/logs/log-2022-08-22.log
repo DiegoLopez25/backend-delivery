@@ -1,0 +1,32 @@
+ERROR - 2022-08-22 22:28:44 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+CRITICAL - 2022-08-22 22:28:44 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(27): CodeIgniter\BaseModel->first()
+#5 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\AuthController->login()
+#6 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#10 {main}
+ERROR - 2022-08-22 22:39:58 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+CRITICAL - 2022-08-22 22:39:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(27): CodeIgniter\BaseModel->first()
+#5 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\AuthController->login()
+#6 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#10 {main}

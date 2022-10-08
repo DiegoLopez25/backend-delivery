@@ -1,0 +1,87 @@
+CRITICAL - 2022-08-20 12:57:20 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php on line 52 and at least 3 expected
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(52): Firebase\JWT\JWT::encode(Array, 'diegolopez25')
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(33): App\Controllers\AuthController->generarJWT(Array)
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\AuthController->login()
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#7 {main}
+CRITICAL - 2022-08-20 12:59:14 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php on line 52 and at least 3 expected
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(52): Firebase\JWT\JWT::encode(Array, 'diegolopez25')
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(33): App\Controllers\AuthController->generarJWT(Array)
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\AuthController->login()
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#7 {main}
+CRITICAL - 2022-08-20 12:59:37 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php on line 52 and at least 3 expected
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(52): Firebase\JWT\JWT::encode(Array, 'diegolopez25')
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(33): App\Controllers\AuthController->generarJWT(Array)
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\AuthController->login()
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#7 {main}
+CRITICAL - 2022-08-20 13:00:06 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php on line 52 and at least 3 expected
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(52): Firebase\JWT\JWT::encode(Array, 'diegolopez25')
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(33): App\Controllers\AuthController->generarJWT(Array)
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\AuthController->login()
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#7 {main}
+CRITICAL - 2022-08-20 13:01:28 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php on line 52 and at least 3 expected
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(52): Firebase\JWT\JWT::encode(Array, 'diegolopez25')
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\app\Controllers\AuthController.php(33): App\Controllers\AuthController->generarJWT(Array)
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\AuthController->login()
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#7 {main}
+CRITICAL - 2022-08-20 23:20:17 --> Call to undefined function App\Controllers\API\validarAcceso()
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->index()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}
+CRITICAL - 2022-08-20 23:21:36 --> Call to undefined function App\Controllers\API\validarAcceso()
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->index()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}
+CRITICAL - 2022-08-20 23:21:56 --> Call to undefined function App\Controllers\API\validarAcceso()
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->index()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}
+CRITICAL - 2022-08-20 23:22:24 --> Call to undefined function App\Controllers\API\validarAcceso()
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->index()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}
+CRITICAL - 2022-08-20 23:25:07 --> Call to undefined function App\Controllers\API\validarAcceso()
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->index()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}
+CRITICAL - 2022-08-20 23:26:39 --> Call to undefined function App\Controllers\API\validarAcceso()
+#0 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(825): App\Controllers\API\Usuario->index()
+#1 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\Usuario))
+#2 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\user\Desktop\Pre-especializacion\Proyecto Delivery\backend\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\user\\D...')
+#5 {main}
