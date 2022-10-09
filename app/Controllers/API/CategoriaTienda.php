@@ -24,11 +24,9 @@ class CategoriaTienda extends ResourceController
             if (!validarAcceso(array('Administrador'), $this->request->getServer('HTTP_AUTHORIZATION'))) {
                 return $this->failServerError("No tienes permisos para acceder a este recurso");
             }
-            $categoriaTienda = $this->model->findAll();
-            if ($categoriaTienda == null) {
-                return $this->respondNoContent("No hay registros de categorias");
-            }
-            return $this->respond($categoriaTienda);
+            $categories = $this->model->findAll();
+
+            return $this->respond(['categories' => $categories]);
 
         } catch (Exception $e) {
             return $this->failServerError("Ha ocurrido un error en el servidor");
@@ -38,17 +36,25 @@ class CategoriaTienda extends ResourceController
     public function create()
     {
         try {
+
             if (!validarAcceso(array('Administrador'), $this->request->getServer('HTTP_AUTHORIZATION'))) {
                 return $this->failServerError("No tienes permisos para acceder a este recurso");
             }
 
-            $categoriaTienda = $this->request->getJSON();
-            if ($this->model->insert($categoriaTienda)):
-                $categoriaTienda->id = $this->model->insertID();
-                return $this->respondCreated($categoriaTienda);
-            else:
-                return $this->failValidationErrors($this->model->validation->listErrors());
-            endif;
+            $rules = [
+                'nombre' => ['rules' => 'required'],
+            ];
+
+            if (!$this->validate($rules)) {
+                return $this->fail($this->validator->getErrors(), 422);
+            }
+
+            $nombre = $this->request->getVar("nombre");
+
+            if ($this->model->insert(["nombre" => $nombre])){
+                return $this->respondCreated(["message" => "Categoría de Tienda registrada éxitosamente"]);
+            }
+
         } catch (Exception $e) {
             return $this->failServerError("Ha ocurrido un error en el servidor");
         }
@@ -64,11 +70,13 @@ class CategoriaTienda extends ResourceController
                 return $this->failServerError("Ha ocurrido un error en el servidor");
             }
 
-            $categoriaTienda = $this->model->find($id);
-            if ($categoriaTienda == null) {
-                return $this->failNotFound("No se ha encontrado la categoria dela tienda con el id: " . $id);
+            $category = $this->model->find($id);
+
+            if ($category == null) {
+                return $this->failNotFound("No se ha encontrado la categoria de la tienda con el id: " . $id);
             }
-            return $this->respond($categoriaTienda);
+            return $this->respond(['category' => $category]);
+
         } catch (Exception $e) {
             return $this->failServerError("Ha ocurrido un error en el servidor");
         }
@@ -80,22 +88,35 @@ class CategoriaTienda extends ResourceController
             if (!validarAcceso(array('Administrador'), $this->request->getServer('HTTP_AUTHORIZATION'))) {
                 return $this->failServerError("No tienes permisos para acceder a este recurso");
             }
+
+            $rules = [
+                'nombre' => ['rules' => 'required'],
+            ];
+
             if ($id == null) {
                 return $this->failServerError("Ha ocurrido un error en el servidor");
             }
 
+            if (!$this->validate($rules)) {
+                return $this->fail($this->validator->getErrors(), 422);
+            }
+
+            $nombre = $this->request->getVar("nombre");
+
+            $data = [
+                "nombre" => $nombre
+            ];
+
             $categoriaTienda = $this->model->find($id);
+
             if ($categoriaTienda == null) {
                 return $this->failNotFound("No se ha encontrado la categoria de la tienda con el id: " . $id);
             }
 
-            $categoriaTienda = $this->request->getJSON();
-            if ($this->model->update($id, $categoriaTienda)):
-                $categoriaTienda->id = $id;
-                return $this->respondUpdated($categoriaTienda);
-            else:
-                return $this->failValidationErrors($this->model->validation->listErrors());
-            endif;
+            if ($this->model->update($id, $data)){
+                return $this->respond(["message" => "Categoría de Tienda actualizada éxitosamente"], 202);
+            }
+
         } catch (Exception $e) {
             return $this->failServerError("Ha ocurrido un error en el servidor");
         }
@@ -117,7 +138,7 @@ class CategoriaTienda extends ResourceController
             }
 
             if ($this->model->delete($id)):
-                return $this->respondDeleted($categoriaTiendaVerificado);
+                return $this->respond("", 204);
             else:
                 return $this->failServerError("No se ha podido eliminar el registro");
             endif;
