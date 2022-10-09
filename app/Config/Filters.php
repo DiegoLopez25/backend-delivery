@@ -3,7 +3,6 @@
 namespace Config;
 
 use App\Filters\AuthFilter;
-use App\Filters\Cors;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -26,7 +25,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'authFilter'    => AuthFilter::class,
-        'cors'          => Cors::class,
+        'cors' => \Fluent\Cors\Filters\CorsFilter::class,
     ];
 
     /**
@@ -40,10 +39,9 @@ class Filters extends BaseConfig
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
-            'cors'
         ],
         'after' => [
-            'toolbar',
+//            'toolbar',
             // 'honeypot',
             // 'secureheaders',
         ],
@@ -74,6 +72,7 @@ class Filters extends BaseConfig
             'before' => [
                 'api/*'
             ]
-        ]
+        ],
+        'cors' => ['after' => ['api/*','auth/*']],
     ];
 }

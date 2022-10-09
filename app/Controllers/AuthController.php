@@ -103,7 +103,7 @@ class AuthController extends BaseController
         $payload = [
             'aud' => base_url(),
             'iat' => $time,//tiempo del token
-            'exp' => $time + 600,//tiempo cuando expira el token en segundos
+            'exp' => $time + 18000,//tiempo cuando expira el token en segundos
             'data' => $userPayload
         ];
         $jwt = JWT::encode($payload, $key, 'HS256');

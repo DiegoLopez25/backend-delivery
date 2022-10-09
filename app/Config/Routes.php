@@ -37,9 +37,7 @@ $routes->get('/', 'Home::index');
 $routes->post('/auth/login', 'AuthController::login');
 $routes->get('/auth/user', 'AuthController::getUserData', ['authFilter']);
 
-$routes->group('api',['namespace'=>'App\Controllers\API','filter' => 'authFilter'],function($routes){
-
-
+$routes->group('api',['namespace'=>'App\Controllers\API', 'filter' => 'authFilter'],function($routes){
 
     /*Routes Usuarios  */
     $routes->get('usuarios','Usuario::index');
@@ -63,6 +61,7 @@ $routes->group('api',['namespace'=>'App\Controllers\API','filter' => 'authFilter
     $routes->delete('repartidores/delete/(:num)','Repartidor::delete/$1');
 
     /*Routes CategoriaTiendas  */
+
     $routes->get('categorias-tiendas','CategoriaTienda::index');
     $routes->post('categorias-tiendas/create','CategoriaTienda::create');
     $routes->get('categorias-tiendas/edit/(:num)','CategoriaTienda::edit/$1');

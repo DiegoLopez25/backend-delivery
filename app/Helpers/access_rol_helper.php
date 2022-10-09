@@ -15,7 +15,7 @@ function validarAcceso($roles,$authHeader){
     $jwt = JWT::decode($jwt,new Key($key,"HS256"));
     
     $rolModel = new RolModel();
-    $rol = $rolModel->find($jwt->data->id_rol);
+    $rol = $rolModel->find($jwt->data->role_id);
     
     if($rol ==null){
         return false;
